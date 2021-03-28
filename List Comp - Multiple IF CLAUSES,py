@@ -1,0 +1,17 @@
+import colorama
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
+
+# Using a list comprehension list all the students if born before the year 2000 if their name starts with C, D, or H
+
+List =  [('Dana Hausman', 1996), ('Corrine Haley', 1998), ('Huan Xin (Winnie) Cai', 1997), ('Greg Willits', 2001), ('Michael Lyda', 1995), ('Aidana Utepkaliyeva', 2000), 
+('Claudius Taylor', 2001), ('Dyian Nikolv', 2016), ('Higl Daniel', 2009), ('Mary Beth Arroyo', 2010), ('Sajini George', 2006), ('Natalia Gomez', 2007), 
+('Riad Mesharafa', 1922),('Shafan Sugarman', 1980),('Sarah Chang', 1946), ('Rashmi Venkatesh', 1970), ('Higl Daniel', 1919), ('Domineco Sacca', 2000), ('Tanzeela Chaudry', 2020),
+('Nataliia Zdrok', 2121),('Natnael Argaw', 2021),('Nosa Okundaye',2525), ('Sibel Gulmez', 2527), ('Serge Mavuba', 1995), ('Geethalakshmi Prasanna', 2000), ('Gwei Balantar', 3000),
+('Imran Barker', 1900), ('Lesley Ndeh', 1999), ('Trevor Unaegbu', 2001), ('Abraham Musa', 2000), ('Roberto Santos', 1890)]
+
+
+# We want our list to contain the student name but this time when we write the for-loop; each element is a tuple.
+# Next using multiple IF CLAUSES We select the students that were born before 2000,  whose name starts with C, D, or H
+GradStudent = [ student for (student, year) in List if year < 2000 if student.startswith("C") or student.startswith("D") or student.startswith("H")]
+print(Fore.WHITE+ Back.GREEN + Style.BRIGHT + ", ".join(GradStudent))
